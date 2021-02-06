@@ -30,7 +30,7 @@ function App() {
       <div className= 'container'>
         <form onSubmit={save} >
           <div className ='add'>
-            <label htmlFor="adc">Lista</label>
+            <label htmlFor="adc">Adicionar usuário </label>
             <input type="text" value={value} onChange = {e => setValue(e.target.value)} />
             <button type ='submit'> Salvar</button>
           </div>

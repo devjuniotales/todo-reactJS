@@ -4,14 +4,14 @@
     
     display: flex;
     justify-content: center;
-    align-content: center;
-
 }
 .container {
     height: 450px;
     width: 450px;
     
+
     border: 1px black solid;
+    background: lightgrey;
 }
 .add{
     display: flex;
@@ -19,6 +19,9 @@
 
     justify-content: center;
     padding-top: 25px;
+
+    
+    background:  rgb(196, 191, 183);
 
 }
 .add > label {
@@ -29,12 +32,15 @@
 }
 .add > button {
     margin-left: 25px;
+
+    border-radius: 25px;
 }
 .header {
     display: flex;
 
+
+    background: rgb(243, 243, 243);
     justify-content: center;
-    margin-top: 25px;
     border: 1px solid black;
 }
 .list {
