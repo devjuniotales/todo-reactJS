@@ -1,17 +1,18 @@
-import {useState } from 'react';
+import  {useState } from 'react';
 
 import './styles/App.css';
 
 
 function App() {
   const [value, setValue] = useState('')
-  const [todo, setTodo] = useState([{index : 1, user : ''}])
+  const [todo, setTodo] = useState([])
 
   function save(e) {
-    e.preventDefault()
-        let i = [...todo].map(i => i.index).reduce((acc, at) => {
-        return acc == 0 ? 1 : acc + 1
-        })
+      e.preventDefault()
+      let i = 1
+      todo.forEach(element => {
+          return i = element.index + 1 
+      });
         const novo = [{
          index:  i,
          user: value
@@ -37,13 +38,13 @@ function App() {
           <div className ='header'>
             <label htmlFor="users">Usuários</label>
           </div>
-          {todo.map((item, index) => {
+          {todo.map((item) => {
           return(
             <div className ='list'>
                   <div className ='listBody'>
                       <label htmlFor="id">{item.index}</label>
                       <label htmlFor="user">{item.user}</label>
-                        <button type ='button' onClick = {()=> remove(index)}>Excluir</button>
+                        <button type ='button' onClick = {()=> remove(item.index)}>Excluir</button>
                   </div>
             </div>
           )
